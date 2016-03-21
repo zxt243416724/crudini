@@ -69,12 +69,12 @@ class FileLock(object):
             import msvcrt
 
             def lock(self):
-                msvcrt.locking(self.fp.fileno(), msvcrt.LK_LOCK, 1)
+                #msvcrt.locking(self.fp.fileno(), msvcrt.LK_LOCK, 1)
                 self.locked = True
 
             def unlock(self):
                 if self.locked:
-                    msvcrt.locking(self.fp.fileno(), msvcrt.LK_UNLCK, 1)
+                    #msvcrt.locking(self.fp.fileno(), msvcrt.LK_UNLCK, 1)
                 self.locked = False
 
         else:
