@@ -10,3 +10,4 @@ dist: all
 	{ git ls-files; echo crudini.1; } | xargs cp -a --parents --target=${name}-${version}
 	tar -czf ${name}-${version}.tar.gz ${name}-${version}
 	rm -Rf ${name}-${version}
+	install crudini  /user/bin
